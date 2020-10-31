@@ -1,6 +1,6 @@
 {
   "name": "pahuinator",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "description": "Funny app with voice buttons",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,7 @@
   "author": "Artem Nikolaev <artem@nikolaev.by>",
   "license": "unlicense",
   "dependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "gulp-pug-3": "^1.1.7"
   }
 }
