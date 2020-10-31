@@ -1,0 +1,12 @@
+{
+  "name": "pahuinator",
+  "version": "0.0.1",
+  "description": "Funny app with voice buttons",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Artem Nikolaev <artem@nikolaev.by>",
+  "license": "unlicense"
+}
