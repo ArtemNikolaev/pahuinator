@@ -8,9 +8,11 @@ const {
 const pug = require('gulp-pug-3');
 
 const publicFolder = './public/';
+const distFolder = './dist/';
 
-function moveAudio(cb) {
-  cb();
+function moveAudio() {
+  return src(path.join(publicFolder, 'audio/*'))
+    .pipe(dest(path.join(distFolder, 'audio')));
 }
 
 function styles(cb) {
@@ -30,7 +32,7 @@ function html() {
         },
       }),
     )
-    .pipe(dest('dist'));
+    .pipe(dest(distFolder));
 }
 
 exports.default = parallel(
