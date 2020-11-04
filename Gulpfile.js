@@ -19,8 +19,9 @@ function styles(cb) {
   cb();
 }
 
-function code(cb) {
-  cb();
+function code() {
+  return src(path.join(publicFolder, '*.js'))
+    .pipe(dest(distFolder));
 }
 
 function html() {
