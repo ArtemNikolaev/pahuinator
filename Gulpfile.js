@@ -15,6 +15,21 @@ function moveAudio() {
     .pipe(dest(path.join(distFolder, 'audio')));
 }
 
+function moveImages() {
+  return src(path.join(publicFolder, 'images/*'))
+    .pipe(dest(path.join(distFolder, 'images')));
+}
+
+function moveManifest() {
+  return src(path.join(publicFolder, 'manifest.json'))
+    .pipe(dest(distFolder));
+}
+
+function moveFavicon() {
+  return src(path.join(publicFolder, 'favicon.ico'))
+    .pipe(dest(distFolder));
+}
+
 function styles(cb) {
   cb();
 }
@@ -38,6 +53,9 @@ function html() {
 
 exports.default = parallel(
   moveAudio,
+  moveManifest,
+  moveImages,
+  moveFavicon,
   series(
     parallel(
       styles,

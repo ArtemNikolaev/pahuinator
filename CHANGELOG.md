@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - caching
 - service worker for caching
 - viewport settings
+- manifest for PWA
+- icons for manifest
+- favicon
 
 ## [0.3.0] - 2020-11-04
 ### Added

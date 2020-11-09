@@ -1,0 +1,23 @@
+{
+  "name": "Pahuinator",
+  "short_name": "Phintr",
+  "description": "Funny app with brutal voice",
+  "theme_color": "#ffcc00",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/images/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/images/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
