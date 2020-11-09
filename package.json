@@ -1,6 +1,6 @@
 {
   "name": "pahuinator",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Funny app with voice buttons",
   "main": "index.js",
   "scripts": {

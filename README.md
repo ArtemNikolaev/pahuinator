@@ -1,6 +1,6 @@
 # Pahuinator
 
-__Version__ | [0.3.0]
+__Version__ | [0.4.0]
 --- | ---
 __Changelog__ | [Changelog](CHANGELOG.md)
 __License__ | The Unlicense
@@ -29,4 +29,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Please make sure to update tests as appropriate.
 
-[0.3.0]: https://github.com/ArtemNikolaev/pahuinator/compare/v0.2.0...v0.3.0
+[0.4.0]: https://github.com/ArtemNikolaev/pahuinator/compare/v0.3.0...v0.4.0
