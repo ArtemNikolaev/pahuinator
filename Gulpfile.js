@@ -20,7 +20,7 @@ function styles(cb) {
 }
 
 function code() {
-  return src(path.join(publicFolder, '*.js'))
+  return src(path.join(publicFolder, 'js/*.js'))
     .pipe(dest(distFolder));
 }
 
