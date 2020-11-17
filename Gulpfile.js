@@ -8,7 +8,7 @@ const {
 } = require('gulp');
 const pug = require('gulp-pug-3');
 
-const srcFolder = './public/';
+const srcFolder = './src/';
 const distFolder = './dist/';
 
 function moveAudio() {
