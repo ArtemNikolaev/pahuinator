@@ -1,11 +1,14 @@
-const audioVersion = `audio-v0.0.3`;
-const uiVersion = `ui-v0.0.4`;
+const audioVersion = `audio-v0.0.4`;
+const uiVersion = `ui-v0.0.7`;
 
 const uiCache = [
   '/',
+  'favicon.ico',
+  'manifest.json',
+  'images/icon-192x192.png',
+  'images/icon-512x512.png',
 ]
 const audioCache = [
-  'audio.js',
   'audio/1.mp3',
   'audio/2.mp3',
   'audio/3.mp3',

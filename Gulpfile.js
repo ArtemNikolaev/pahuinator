@@ -4,43 +4,43 @@ const {
   parallel,
   src,
   dest,
+  watch,
 } = require('gulp');
 const pug = require('gulp-pug-3');
 
-const publicFolder = './public/';
+const srcFolder = './public/';
 const distFolder = './dist/';
 
 function moveAudio() {
-  return src(path.join(publicFolder, 'audio/*'))
+  return src(path.join(srcFolder, 'audio/*'))
     .pipe(dest(path.join(distFolder, 'audio')));
 }
 
+function moveRoot() {
+  return src(path.join(srcFolder, 'root/*'))
+    .pipe(dest(distFolder));
+}
+
 function moveImages() {
-  return src(path.join(publicFolder, 'images/*'))
+  return src(path.join(srcFolder, 'images/*'))
     .pipe(dest(path.join(distFolder, 'images')));
 }
 
-function moveManifest() {
-  return src(path.join(publicFolder, 'manifest.json'))
-    .pipe(dest(distFolder));
-}
-
-function moveFavicon() {
-  return src(path.join(publicFolder, 'favicon.ico'))
-    .pipe(dest(distFolder));
-}
-
 function styles(cb) {
+  // todo: move styles
   cb();
 }
 
 function code() {
-  return src(path.join(publicFolder, 'js/*.js'))
+  return src(
+    path.join(srcFolder, 'js/*.js'),
+    { ignore: path.join(srcFolder, 'js/_*.js') }
+  )
     .pipe(dest(distFolder));
 }
 
 function html() {
-  return src(path.join(publicFolder, 'index.pug'))
+  return src(path.join(srcFolder, 'index.pug'))
     .pipe(
       pug({
         locals: {
@@ -51,11 +51,14 @@ function html() {
     .pipe(dest(distFolder));
 }
 
-exports.default = parallel(
+function watchAll() {
+  return watch([srcFolder], build);
+}
+
+const build = parallel(
   moveAudio,
-  moveManifest,
   moveImages,
-  moveFavicon,
+  moveRoot,
   series(
     parallel(
       styles,
@@ -64,3 +67,7 @@ exports.default = parallel(
     html,
   ),
 );
+
+exports.build = build;
+
+exports.default = series(build, watchAll);
