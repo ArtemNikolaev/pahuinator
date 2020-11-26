@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - adding btn functionality and styles
 - add favicon, manifest, logo images to cache
 - move sources from `public` folder to `src'
+- added notes pdf for history
 
 ## [0.4.0] - 2020-11-10
 ### Added
