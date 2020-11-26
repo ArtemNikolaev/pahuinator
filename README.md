@@ -1,4 +1,4 @@
-# Pahuinator
+# Pahuinator [![Netlify Status](https://api.netlify.com/api/v1/badges/11bef1e8-7557-445d-ba12-230eae9883f7/deploy-status)](https://app.netlify.com/sites/pahuinator/deploys)
 
 __Version__ | [1.0.0]
 --- | ---
